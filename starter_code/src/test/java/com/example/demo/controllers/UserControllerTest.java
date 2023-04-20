@@ -6,9 +6,7 @@ import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 import org.junit.Before;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -18,12 +16,12 @@ import static org.mockito.Mockito.when;
 
 public class UserControllerTest {
     private UserController userController;
-    private UserRepository userRepository = mock(UserRepository.class);
-    private CartRepository cartRepository = mock(CartRepository.class);
+    private final UserRepository userRepository = mock(UserRepository.class);
+    private final CartRepository cartRepository = mock(CartRepository.class);
 
-    private BCryptPasswordEncoder bCryptPasswordEncoder = mock(BCryptPasswordEncoder.class);
+    private final BCryptPasswordEncoder bCryptPasswordEncoder = mock(BCryptPasswordEncoder.class);
 
-    @BeforeEach
+    @Before
     public void setUp() {
         userController = new UserController();
         TestUtils.injectObjects(userController, "userRepository", userRepository);
@@ -96,8 +94,9 @@ public class UserControllerTest {
 
         User u = response.getBody();
 
+        assertNotNull(u);
         final ResponseEntity<User> response1 = userController.findById(u.getId());
-        assertNotNull(response);
+        assertNotNull(response1);
         assertEquals(200, response.getStatusCodeValue());
 
     }
@@ -113,9 +112,6 @@ public class UserControllerTest {
 
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
-
-
-        User u = response.getBody();
 
         final ResponseEntity<User> response1 = userController.findById(100L);
         assertNotNull(response);
@@ -140,9 +136,6 @@ public class UserControllerTest {
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
 
-
-        User u = response.getBody();
-
         final ResponseEntity<User> response1 = userController.findByUserName("test");
         assertNotNull(response1);
         assertEquals(200, response1.getStatusCodeValue());
@@ -159,9 +152,6 @@ public class UserControllerTest {
 
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
-
-
-        User u = response.getBody();
 
         final ResponseEntity<User> response1 = userController.findByUserName("test2");
         assertNotNull(response1);
