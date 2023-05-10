@@ -36,7 +36,7 @@ public class UserController {
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		if (user == null) {
-			logger.error("Exception: User {} was not found.", username);
+			logger.error("FIND_USER Exception: User {} was not found.", username);
 		}
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
 	}
@@ -50,12 +50,12 @@ public class UserController {
 		user.setCart(cart);
 		if (createUserRequest.getPassword().length() < 7 ||
 			!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
-			logger.error("Exception: User was not created. The password was either less than 7 characters of the passwords did not match.");
+			logger.error("CREATE_USER Exception: User was not created. The password was either less than 7 characters of the passwords did not match.");
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
-		logger.info("Success: User {} was created", createUserRequest.getUsername());
+		logger.info("CREATE_USER Success: User {} was created", createUserRequest.getUsername());
 		return ResponseEntity.ok(user);
 	}
 	
