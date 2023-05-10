@@ -1,0 +1,139 @@
+Started by user [8mha:////4KxQqj52OmvVhAz4NuhCSD8IYTSik8TfYo64cIpMrjjsAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9rNS87My8YgDGtiJjwgAAAA==[0mJenkins
+Running as SYSTEM
+Building in workspace C:\Users\tbelu\.jenkins\workspace\E-commerce Application
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/tcab987/nd035-c4-Security-and-DevOps.git
+ > c:/tools/Git/bin/git.exe init C:\Users\tbelu\.jenkins\workspace\E-commerce Application # timeout=10
+Fetching upstream changes from https://github.com/tcab987/nd035-c4-Security-and-DevOps.git
+ > c:/tools/Git/bin/git.exe --version # timeout=10
+ > git --version # 'git version 2.40.1.windows.1'
+ > c:/tools/Git/bin/git.exe fetch --tags --force --progress -- https://github.com/tcab987/nd035-c4-Security-and-DevOps.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > c:/tools/Git/bin/git.exe config remote.origin.url https://github.com/tcab987/nd035-c4-Security-and-DevOps.git # timeout=10
+ > c:/tools/Git/bin/git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > c:/tools/Git/bin/git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision 7fa24685dfb0a8240b7a0b4cf1d6060e716cd8de (refs/remotes/origin/master)
+ > c:/tools/Git/bin/git.exe config core.sparsecheckout # timeout=10
+ > c:/tools/Git/bin/git.exe checkout -f 7fa24685dfb0a8240b7a0b4cf1d6060e716cd8de # timeout=10
+Commit message: "Enhanced logging messages for Splunk integration"
+ > c:/tools/Git/bin/git.exe rev-list --no-walk 81142fdb39dd251b52d181e98ce45abbd7ea519b # timeout=10
+[E-commerce Application] $ cmd.exe /C "mvn -f starter_code/pom.xml package && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to C:\Users\tbelu\.jenkins\workspace\E-commerce Application\starter_code\target\classes
+[INFO] 
+[INFO] --- resources:3.1.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\tbelu\.jenkins\workspace\E-commerce Application\starter_code\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to C:\Users\tbelu\.jenkins\workspace\E-commerce Application\starter_code\target\test-classes
+[INFO] /C:/Users/tbelu/.jenkins/workspace/E-commerce Application/starter_code/src/test/java/com/example/demo/TestUtils.java: C:\Users\tbelu\.jenkins\workspace\E-commerce Application\starter_code\src\test\java\com\example\demo\TestUtils.java uses or overrides a deprecated API.
+[INFO] /C:/Users/tbelu/.jenkins/workspace/E-commerce Application/starter_code/src/test/java/com/example/demo/TestUtils.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ auth-course ---
+[8mha:////4CABDv+NNZ7UbfagMMsGHojvcsCEtkEKuEc7tE1h5+w1AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+2023-05-10T11:20:22.635-0400 INFO Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.SareetaApplicationTests], using SpringBootContextLoader
+2023-05-10T11:20:22.651-0400 INFO Could not detect default resource locations for test class [com.example.demo.SareetaApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-10T11:20:22.653-0400 INFO Could not detect default configuration classes for test class [com.example.demo.SareetaApplicationTests]: SareetaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-10T11:20:22.850-0400 INFO Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.SareetaApplicationTests
+2023-05-10T11:20:23.002-0400 INFO Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2023-05-10T11:20:23.029-0400 INFO Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@383790cf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@74971ed9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@131fcb6f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@ccd1bc3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@878537d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4455f57d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@29fc1a2b, org.springframework.test.context.event.EventPublishingTestExecutionListener@4d0b0fd4, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@7a24eb3, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@6c37bd27, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@25d3cfc8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@30331109, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2571066a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@74fe5966, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4fe875be, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@677b8e13]
+2023-05-10T11:20:23.080-0400 INFO Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.SareetaApplicationTests], using SpringBootContextLoader
+2023-05-10T11:20:23.082-0400 INFO Could not detect default resource locations for test class [com.example.demo.SareetaApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-10T11:20:23.082-0400 INFO Could not detect default configuration classes for test class [com.example.demo.SareetaApplicationTests]: SareetaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-10T11:20:23.086-0400 INFO Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.SareetaApplicationTests
+2023-05-10T11:20:23.089-0400 INFO Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2023-05-10T11:20:23.090-0400 INFO Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@bdc8014, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1f443fae, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@73ba6fe6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@79ab34c1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1698d7c0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@281f23f2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@87abc48, org.springframework.test.context.event.EventPublishingTestExecutionListener@28d79cba, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@782168b7, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@29f0c4f2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7435a578, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6093d508, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13047d7d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3c7cfcbb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@65bb9029, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1bfe3203]
+[INFO] Running com.example.demo.controllers.CartControllerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.886 s - in com.example.demo.controllers.CartControllerTest
+[INFO] Running com.example.demo.controllers.ItemControllerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.example.demo.controllers.ItemControllerTest
+[INFO] Running com.example.demo.controllers.OrderControllerTest
+2023-05-10T11:20:24.149-0400 ERROR CREATE_ORDER Exception: Order could not be created. User test was not found.
+2023-05-10T11:20:24.152-0400 INFO CREATE_ORDER Success: Order for user test was created
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.example.demo.controllers.OrderControllerTest
+[INFO] Running com.example.demo.controllers.UserControllerTest
+2023-05-10T11:20:24.195-0400 INFO CREATE_USER Success: User test was created
+2023-05-10T11:20:24.198-0400 INFO CREATE_USER Success: User test was created
+2023-05-10T11:20:24.201-0400 ERROR CREATE_USER Exception: User was not created. The password was either less than 7 characters of the passwords did not match.
+2023-05-10T11:20:24.205-0400 INFO CREATE_USER Success: User test was created
+2023-05-10T11:20:24.206-0400 ERROR FIND_USER Exception: User test2 was not found.
+2023-05-10T11:20:24.208-0400 INFO CREATE_USER Success: User test was created
+2023-05-10T11:20:24.211-0400 INFO CREATE_USER Success: User test was created
+2023-05-10T11:20:24.213-0400 ERROR CREATE_USER Exception: User was not created. The password was either less than 7 characters of the passwords did not match.
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 s - in com.example.demo.controllers.UserControllerTest
+[INFO] Running com.example.demo.security.UserDetailsServiceImplTest
+2023-05-10T11:20:24.224-0400 ERROR LOAD_USER Exception: Could not load user notfound. The username was not found
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.example.demo.security.UserDetailsServiceImplTest
+[INFO] Running com.example.demo.SareetaApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.2.RELEASE)
+
+2023-05-10T11:20:24.677-0400 INFO Starting SareetaApplicationTests on TomSurface8 with PID 32808 (started by tbelu in C:\Users\tbelu\.jenkins\workspace\E-commerce Application\starter_code)
+2023-05-10T11:20:24.681-0400 INFO No active profile set, falling back to default profiles: default
+2023-05-10T11:20:25.464-0400 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-10T11:20:25.572-0400 INFO Finished Spring Data repository scanning in 94ms. Found 4 JPA repository interfaces.
+2023-05-10T11:20:26.914-0400 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-10T11:20:27.013-0400 INFO HHH000412: Hibernate ORM core version 5.4.18.Final
+2023-05-10T11:20:27.090-0400 INFO HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2023-05-10T11:20:27.694-0400 INFO HikariPool-1 - Starting...
+2023-05-10T11:20:27.981-0400 INFO HikariPool-1 - Start completed.
+2023-05-10T11:20:28.015-0400 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-10T11:20:29.118-0400 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-10T11:20:29.130-0400 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-10T11:20:30.293-0400 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-10T11:20:32.186-0400 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bb3487c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c5b4b91, org.springframework.security.web.header.HeaderWriterFilter@88fc9cb, org.springframework.web.filter.CorsFilter@650997b0, org.springframework.security.web.authentication.logout.LogoutFilter@6d7d0946, com.example.demo.security.JWTAuthenticationFilter@7337f87e, com.example.demo.security.JWTAuthenticationVerficationFilter@77e24d3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55589ef5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6414eb98, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66831b14, org.springframework.security.web.session.SessionManagementFilter@603a34e5, org.springframework.security.web.access.ExceptionTranslationFilter@5f1dadf4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e140753]
+2023-05-10T11:20:32.832-0400 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2023-05-10T11:20:33.411-0400 INFO Started SareetaApplicationTests in 9.096 seconds (JVM running for 12.87)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.256 s - in com.example.demo.SareetaApplicationTests
+2023-05-10T11:20:33.765-0400 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2023-05-10T11:20:33.770-0400 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-10T11:20:33.774-0400 INFO HikariPool-1 - Shutdown initiated...
+2023-05-10T11:20:33.787-0400 INFO HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.1.1:jar (default-jar) @ auth-course ---
+[INFO] Building jar: C:\Users\tbelu\.jenkins\workspace\E-commerce Application\starter_code\target\auth-course-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:2.3.2.RELEASE:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.277 s
+[INFO] Finished at: 2023-05-10T11:20:36-04:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
