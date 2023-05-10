@@ -50,7 +50,7 @@ public class UserController {
 		user.setCart(cart);
 		if (createUserRequest.getPassword().length() < 7 ||
 			!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
-			logger.error("CREATE_USER Exception: User was not created. The password was either less than 7 characters of the passwords did not match.");
+			logger.error("CREATE_USER Exception: User was not created. The password was either less than 7 characters or the passwords did not match.");
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
